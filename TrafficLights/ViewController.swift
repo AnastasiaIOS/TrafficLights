@@ -20,11 +20,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         redCircleView.alpha = 0.3
-        yellowCircleView.alpha = 0.3
+        
         greenCircleView.alpha = 0.3
         
         redCircleView.layer.cornerRadius = 45
-        yellowCircleView.layer.cornerRadius = 45
+        
         greenCircleView.layer.cornerRadius = 45
         
         clickButton.layer.cornerRadius = 20
