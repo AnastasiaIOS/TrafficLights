@@ -16,13 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1uo-fs-Bjg">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uo-fs-Bjg">
                                 <rect key="frame" x="123" y="76" width="168" height="169"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6DN-MR-Ymv">
-                                <rect key="frame" x="123" y="468" width="168" height="169"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeV-kb-DGr">
                                 <rect key="frame" x="121" y="724" width="172" height="65"/>
@@ -40,26 +36,39 @@
                                     <action selector="showTextButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="9uH-e8-ajo"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nJe-KU-0bS">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJe-KU-0bS">
                                 <rect key="frame" x="123" y="271" width="168" height="169"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPr-4p-b1E">
+                                <rect key="frame" x="123" y="473" width="168" height="169"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
+                            <constraint firstItem="1uo-fs-Bjg" firstAttribute="trailing" secondItem="nJe-KU-0bS" secondAttribute="trailing" id="322-KG-xJB"/>
                             <constraint firstItem="qeV-kb-DGr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="4j3-4E-uND"/>
-                            <constraint firstItem="qeV-kb-DGr" firstAttribute="top" secondItem="6DN-MR-Ymv" secondAttribute="bottom" constant="87" id="BiX-bW-Cpc"/>
+                            <constraint firstAttribute="bottom" secondItem="nJe-KU-0bS" secondAttribute="bottom" constant="456" id="6u8-Pl-cN5"/>
+                            <constraint firstItem="hPr-4p-b1E" firstAttribute="top" secondItem="nJe-KU-0bS" secondAttribute="bottom" constant="33" id="BXb-HH-KMQ"/>
+                            <constraint firstItem="1uo-fs-Bjg" firstAttribute="leading" secondItem="hPr-4p-b1E" secondAttribute="leading" id="FPF-Tf-nhD"/>
                             <constraint firstItem="qeV-kb-DGr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HAV-Tp-4Up"/>
                             <constraint firstItem="1uo-fs-Bjg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="HrF-6x-48r"/>
+                            <constraint firstAttribute="bottom" secondItem="1uo-fs-Bjg" secondAttribute="bottom" constant="651" id="U4F-IO-PLK"/>
+                            <constraint firstItem="1uo-fs-Bjg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="WBS-xF-XcI"/>
+                            <constraint firstItem="1uo-fs-Bjg" firstAttribute="trailing" secondItem="hPr-4p-b1E" secondAttribute="trailing" id="Zva-bK-djx"/>
                             <constraint firstItem="qeV-kb-DGr" firstAttribute="centerX" secondItem="1uo-fs-Bjg" secondAttribute="centerX" id="hho-UR-MoM"/>
-                            <constraint firstItem="qeV-kb-DGr" firstAttribute="centerX" secondItem="6DN-MR-Ymv" secondAttribute="centerX" id="oRd-i5-pOo"/>
+                            <constraint firstItem="qeV-kb-DGr" firstAttribute="top" secondItem="hPr-4p-b1E" secondAttribute="bottom" constant="82" id="pf2-La-eoB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qeV-kb-DGr" secondAttribute="bottom" constant="73" id="sXP-5Z-A6l"/>
+                            <constraint firstItem="nJe-KU-0bS" firstAttribute="top" secondItem="1uo-fs-Bjg" secondAttribute="bottom" constant="26" id="tW4-Lh-yEC"/>
+                            <constraint firstItem="1uo-fs-Bjg" firstAttribute="leading" secondItem="nJe-KU-0bS" secondAttribute="leading" id="yAi-Oc-UBX"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="greenCircleView" destination="hPr-4p-b1E" id="DUI-Ga-saC"/>
                         <outlet property="redCircleView" destination="1uo-fs-Bjg" id="HcR-W2-bnK"/>
+                        <outlet property="yellowView" destination="nJe-KU-0bS" id="6rv-PS-Vx5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
