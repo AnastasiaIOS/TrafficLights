@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet var redCircleView: UIView!
     @IBOutlet var yellowView: UIView!
     @IBOutlet var greenCircleView: UIView!
-    @IBOutlet var clickButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +25,12 @@ class ViewController: UIViewController {
         yellowView.layer.cornerRadius = 45
         greenCircleView.layer.cornerRadius = 45
         
-        clickButton.layer.cornerRadius = 20
+        
     }
 
     
-    @IBAction func showTextButtonPressed() {
-        
-        
-    }
+    
     
 }
+
 
