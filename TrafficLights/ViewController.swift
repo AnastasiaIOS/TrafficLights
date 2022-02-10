@@ -32,17 +32,33 @@ class ViewController: UIViewController {
         
     }
 
+   
+        
+    //высылаю ДЗ "как есть", т.к. уже всю голову сломала над задачей. помогите пожалуйста ее решить в текущей реализации, если конечно можно ее так сделать (подсмотрела в разбор дз, там сделано иначе)
+        
+    
     
     @IBAction func pushAndChangeTextButton() {
         
-        redCircleView.alpha = 1
         textOnTheButton.setTitle("NEXT", for: .normal)
+        //redCircleView.alpha = 1
         
+        changeColorView()
         
+        func changeColorView () {
+            
+            if yellowView.alpha == 0.3 && greenCircleView.alpha == 0.3 {
+                redCircleView.alpha = 1 }
+                
+                if redCircleView.alpha == 1 {
+                    yellowView.alpha = 1
+                    redCircleView.alpha = 0.3}
+            
+                    if yellowView.alpha == 1 {
+                        greenCircleView.alpha = 1
+                        yellowView.alpha = 0.3 }
+                 }
+        }
         
     }
-    
-    
-}
-
 
